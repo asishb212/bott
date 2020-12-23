@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot
+  name="armd">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0185923261856359 0.00139794104580917 0.0616250613776806"
+        rpy="0 0 0" />
+      <mass
+        value="0.0229728962793754" />
+      <inertia
+        ixx="4.91763560980379E-06"
+        ixy="-3.03930819235773E-38"
+        ixz="-8.78765497653432E-39"
+        iyy="6.38933677770128E-06"
+        iyz="6.11173603453858E-38"
+        izz="4.91763560980379E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://armd/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://armd/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="a1">
+    <inertial>
+      <origin
+        xyz="1.9754E-09 0.020363 1.3207E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.021233" />
+      <inertia
+        ixx="8.8427E-06"
+        ixy="-1.0664E-12"
+        ixz="-4.0937E-13"
+        iyy="1.0728E-06"
+        iyz="-1.2933E-12"
+        izz="8.8649E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://armd/meshes/a1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://armd/meshes/a1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j1"
+    type="continuous">
+    <origin
+      xyz="-0.018592 -0.061625 0"
+      rpy="1.5708 0 0.65288" />
+    <parent
+      link="base_link" />
+    <child
+      link="a1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="a2">
+    <inertial>
+      <origin
+        xyz="1.2999E-08 -0.029 0.039232"
+        rpy="0 0 0" />
+      <mass
+        value="0.020476" />
+      <inertia
+        ixx="8.2015E-06"
+        ixy="-1.6565E-12"
+        ixz="-6.9087E-13"
+        iyy="1.046E-06"
+        iyz="4.1078E-12"
+        izz="8.2459E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://armd/meshes/a2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://armd/meshes/a2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j2"
+    type="continuous">
+    <origin
+      xyz="0 0.050398 -0.018267"
+      rpy="0 0 -2.437" />
+    <parent
+      link="a1" />
+    <child
+      link="a2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="a3">
+    <inertial>
+      <origin
+        xyz="1.2999E-08 0.029 0.029159"
+        rpy="0 0 0" />
+      <mass
+        value="0.020476" />
+      <inertia
+        ixx="8.2015E-06"
+        ixy="-1.6565E-12"
+        ixz="-6.9087E-13"
+        iyy="1.046E-06"
+        iyz="4.1078E-12"
+        izz="8.2459E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://armd/meshes/a3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://armd/meshes/a3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j3"
+    type="continuous">
+    <origin
+      xyz="0 -0.058 0.031395"
+      rpy="0 0 2.7355" />
+    <parent
+      link="a2" />
+    <child
+      link="a3" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
